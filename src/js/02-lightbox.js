@@ -22,14 +22,9 @@ function galleryItem(items) {
 
 mainGalleryItemsContainer.insertAdjacentHTML("beforeend", createGallery);
 
-mainGalleryItemsContainer.addEventListener("click", createSliderGallery);
-
-function createSliderGallery(evt) {
-    evt.preventDefault();
-    if (!evt.target.classList.contains("gallery__image")) return;
-    var lightbox = new SimpleLightbox(".gallery a", {
+    var lightbox = new SimpleLightbox(".gallery a", 
+    {
         captionPosition: "bottom",
         captionDelay: 250,
     });
     // lightbox()
-}
